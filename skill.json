@@ -1,0 +1,36 @@
+{
+  "name": "genpark-structured-data-diff-patcher-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Minimal JSON Patch (RFC 6902) operational differential engine supporting atomic delta synchronization across stateful agent workflows.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "data-synchronization",
+  "tags": [
+    "json-patch",
+    "rfc-6902",
+    "state-sync",
+    "differential-engine",
+    "operational-transforms"
+  ],
+  "inputs": {
+    "doc_before": {
+      "type": "object"
+    },
+    "doc_after": {
+      "type": "object"
+    }
+  },
+  "outputs": {
+    "operations_count": {
+      "type": "integer"
+    },
+    "operations": {
+      "type": "array"
+    },
+    "patch_applied_cleanly": {
+      "type": "boolean"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
